@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="#">
+        <!-- 사용자의 편의성을 위해!! 데탑에서는 크게 체감 안되지만 모바일에서는 체크박스를 정확하게 눌러야지만 체크가 되기 때문에 그 언저리만 눌러도 되도록 편의성 업 시켜주기 -->
+        <label>
+            # 이름 : <input type="text"> <br>
+        </label>
+        
+        <label>
+            <input type="checkbox"> 자동 로그인
+        </label>
+
+        <br>
+        <!-- 이 방법이 불편하지만 틀니들이 많아서 이걸 더 많이 씀. -->
+        <input type="checkbox" id="remember">
+        <label for="remember">아이디 기억하기</label>
+
+        <br>
+
+        <!-- 텍스트 상자를 넣는거라 input일거 같지만 아니라는 것을 주의!!! -->
+        <textarea cols="20" rows="5"></textarea> <!--초기 상태의 5개의 행을 입력할 수 있지만, 칸을 더 초과해서 스크롤을 생성해가며 추가 입력 또한 가능함.-->
+
+    </form>
+
+</body>
+</html>

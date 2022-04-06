@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <!-- method = 방식, get(보안에 매우 취약, 주소창에 남아도 되면 get // 데이터를 남기면 그걸 복사했을 때 타인이 그대로 같은 경로로 접속하는 것이 가능.)과 post(데이터가 중요할 때, 주소창에 남겨서 좋을게 없는 것일 때)의 방식이 있음. -->
+        <!-- autocomplete의 기본값은 on임 자동완성 안하고 싶으면 off로 입력. -->
+        <!-- validate = 검증 기능이 기본으로 있음. 내가 이 검증의 형태를 바꾸고 싶다면 기본검증기능을 꺼야함. -->
+    <form action="/login" method="post" autocomplete="off" novalidate> <!--#부분을 어디 서버의 어디로 검증하게 #(url)으로 정보를 보내달라고 요청하는 것. url 주소를 적으면 됨.-->
+        <input name='id' type="email" placeholder="아이디를 입력하세요."> <br>
+        <input name='pw' type="password" placeholder="비밀번호를 입력하세요."> <br>
+        <button type="submit">로그인</button>
+
+        <!-- MAC 주소 : 물리적 주소 / IP : 통신용 주소 각 컴마다의 고유의 번호가 있음. -->
+        <!-- 도메인주소는 IP 주소를 외우거나 찾아가기 쉽게 변환해주는 것. 127.0.0. 이런 IP를 naver.com 이라고 하듯이 -->
+        <!--  -->
+    </form>
+
+<!-- -->
+    
+</body>
+</html>

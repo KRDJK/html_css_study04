@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        table {
+            border-collapse: collapse;
+        }
+        td, th {
+            border: 1px solid gray;
+            text-align: center;
+            padding: 7px;
+        }
+        th {
+            background: lightgray;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <!-- 3x4의 테이블을 만들고 싶을 때 만드는 방법!!! -->
+  <!-- table>tr*3>td*4 로 하면 간편히 만들 수 있음. '>'을 쓰면 앞을 부모로 삼고 자식태그로 들어가라는 뜻이 됨.-->
+    <table>
+            <tr>
+                <th colspan="5">* 인적사항</th> <!--colspan 가로로-->
+            </tr>
+            <tr>
+                <th>이름</th>  <!--이런 구분줄 같은 애들은 table header라고 해서 th로 씀-->
+                <th>나이</th>
+                <th>주소</th>
+                <th>성별</th>
+                <th>특이사항</th>
+            </tr>
+            <tr>
+                <td>홍길동</td>
+                <td>30세</td>
+                <td>서울시</td>
+                <td>남성</td>
+                <td rowspan="3">x</td>  <!-- 세로로 갈 때!, 디폴트는 rowspan='1'이지만 마치 n번째 행이 있는거만큼 확장해라-->
+            </tr>
+            <tr>
+                <td>박영희</td>
+                <td>31세</td>
+                <td>경기도</td>
+                <td>여성</td>
+            </tr>
+            <tr>
+                <td>김철수</td>
+                <td>41세</td>
+                <td>제주도</td>
+                <td>남성</td>
+            </tr>
+        
+    </table>
+
+</body>
+</html>
