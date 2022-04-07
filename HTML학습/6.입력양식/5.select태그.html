@@ -8,13 +8,13 @@
 </head>
 <body>
     
-    <form action="#">
+    <form action="#"> <!-- action은 속성이고 #은 속성 값임. 속성값은 "#"으로 쌍따옴표 쓰기. -->
         <!-- optgroup 활용!! 비슷한 계열끼리 카테고리를 나눠줄 수 있음. -->
         <select>
             <optgroup label="Coffee">
                 <option>Americano</option>
                 <!-- checkbox에서는 checked로 미리 지정값을 세팅 가능하듯이 여기선 selected로 활용. -->
-                <option selected>Caffe Latte</option>
+                <option selected>Caffe Latte</option> <!--속성값이 True or False (논리값)이 되는경우에는 속성 이름만 사용.(과거에는 속성값에도 똑같이 입력하여 두번씩 썼음.) -->
                 <option disabled>Cappuccino (Sold out)</option>
             </optgroup>
 
@@ -28,3 +28,6 @@
 
 </body>
 </html>
+
+<!-- 전역 속성은 모든 태그에서 다 사용할 수 있는 속성. -->
+<!-- 나머진 개별 속성 -->
