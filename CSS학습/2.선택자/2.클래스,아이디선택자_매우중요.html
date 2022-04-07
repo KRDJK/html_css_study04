@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+        /* 앞에 .을 쓰면 class라는 뜻임. */
+        .orang {
+            color: orange;
+        }
+
+        /* 앞에 #을 쓰면 id라는 뜻!! */
+        /* id는 유일해야함. 그러나 다른 곳에 같은 id를 줘도 동작은 함. 그러나 문법 상 맞지 않음. 잘못된 표기임. */
+        #big {
+            font-size: 1.5em;
+        }
+
+        /* 먼저 만들어두고 나중에 밑에 내가 이런 형식의 클래스를 지정해주는 것 또한 가능함. */
+        .reverse {
+            transform: rotate(180deg);
+            width: fit-content;
+        }
+
+        .shadow {
+            text-shadow: 1px 1px 6px #333;
+        }
+
+        /* body라인에 모든 p와 span에 적용하려면 */
+        p, span {
+            font-style: italic;
+        }
+        h1,h2,h3,h4,h5,h6 {
+            font-weight: normal;
+        }
+
+        /* 이렇게도 한번에 가능 */
+        .orang, #big {
+            color: red;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <!-- div>(ul>li*3)+div+p+span   +부분은 ul의 형제가 됨. -->
+    <!-- 제일 부모라인에 걸어두면 그 자식라인들도 부모를 따라 한번에 적용됨(이게 상속??) -->
+    <div class="shadow">
+        <ul>
+            <li class="reverse">사과</li>
+            <li>딸기</li>
+            <!-- class는 여러개를 줄 수 있음(무한하게). 입력 형식은 아래와 같이!! -->
+            <li class="orang reverse" id="big">오렌지</li>
+        </ul>
+        <div class="reverse">당근</div>
+        <p>토마토</p>
+        <span class="orang">오렌지</span>
+
+
+        <h1>파인애플</h1>
+        <!-- 처음부터 클래스를 입힐 생각이었다면?? -->
+        <!-- h2.reverse#small 이렇게 입력하고 탭치면 가능!-->
+        <h2 class="reverse" id="small">레몬</h2>
+
+    </div>
+
+</body>
+</html>

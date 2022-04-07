@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        /* before랑 after에만 :: 씀. 하나만 써도 문제 없지만 문법상 맞지 않음. */
+        li::before {
+            content: "번호: ";
+        }
+
+        /* 
+        주의 1: before, after는 content부분에 '텍스트'가 필요없어도 필수로 넣어야 함. 공란으로라도
+        */
+        li::after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: red;
+            /* 주의 2: 도형을 나타내려면 display 속성이 필수 */
+            display: inline-block;
+            /* 블록은 세로로 쌓이기 때문에 밑에 들어감 블록 요소라서 
+            인라인 속성을 가진 블록 요소로 처리하면 됨.*/
+            margin-left: 5px;
+            /* 원을 만드려면 border-radius속성을 50%로 설정 */
+            border-radius: 50%;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <!-- ul>li{$}*10 -->
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ul>
+
+</body>
+</html>

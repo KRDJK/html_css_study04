@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        /* ex) li 태그이면서 orang이라는 클래스를 갖고 있는 것에만(일치할때만) 적용 가능. */
+        li.orang {
+            color: orange;
+        }
+
+        span.orang {
+            background: orange;
+        }
+
+        /* div를 앞에다 쓰고 뒤에 #apple 쓰면 조건이 안맞아서 적용이 안됨. */
+        li#apple {
+            background: red;
+        }
+
+        /* 아래 하단은 4가지 조건+1조건(아이디 조건 추가). 다 충족해야 yellow를 해주겠다는게 됨. */
+        /* 조건을 충족하고도 더 클래스가 있다면 나올까? 결과는 그렇다. 건 조건에 대해서만 충족하면 다른건 어떻든 다 나온다. */
+        h1.yellow.low.primary#change {
+            background: yellow;
+        }
+
+        aside.banner.image#roll {
+            border: 1px solid red;
+            width: 50px;
+            height: 100px;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <!-- div>(ul>li*3)+div+p+span   +부분은 ul의 형제가 됨. -->
+    <!-- 제일 부모라인에 걸어두면 그 자식라인들도 부모를 따라 한번에 적용됨(이게 상속??) -->
+    <div class="shadow">
+        <ul>
+            <li class="reverse" id="apple">사과</li>
+            <li>딸기</li>
+            <!-- class는 여러개를 줄 수 있음(무한하게). 입력 형식은 아래와 같이!! -->
+            <li class="orang reverse" id="big">오렌지</li>
+        </ul>
+        <div class="reverse">당근</div>
+        <p>토마토</p>
+        <span class="orang">오렌지</span>
+
+
+        <h1 id="change" class="yellow low primary">파인애플</h1>
+        <!-- 처음부터 클래스를 입힐 생각이었다면?? -->
+        <!-- h2.reverse#small 이렇게 입력하고 탭치면 가능!-->
+        <h2 class="reverse" id="small">레몬</h2>
+
+    </div>
+
+    <!-- 태그 옆에 속성은 순서가 상관없음. -->
+    <aside class="banner image" id="roll"></aside>
+
+</body>
+</html>

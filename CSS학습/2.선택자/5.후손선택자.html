@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        /* 맨 뒤 선택자가 타겟, 앞에는 조건 */
+        /* 일치선택자는 다 붙여서 쓰지만, div .orang이면 div의 후손!! 클래스 orang을 바꿔라가 됨. */
+        /* '>'가 들어가면 직속!!!! 그냥 띄어서면 후손!!! 다 붙이면 일치!!! */
+        div .orang {
+            color: orange;
+        }
+
+        /* 아래 조건에서 span.orang을 span .orang이라고 하면 안됨. 왜냐면 span의 후손에 orang 클래스가 없기 때문!! */
+        body span.orang {
+            background: red;
+        }
+
+        /* 클래스 shadow의 모든 후손들의 폰트 굵기를 진하게 해라. */
+        /* .shadow > *을 하면 모든 자식들에게 물려줘라, 손자에게는 안감. 직속 자식만!!! */
+        .shadow * {
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <em>안뇽안뇽</em>
+
+    <!-- div>(ul>li*3)+div+p+span   +부분은 ul의 형제가 됨. -->
+    <!-- 제일 부모라인에 걸어두면 그 자식라인들도 부모를 따라 한번에 적용됨(이게 상속??) -->
+    <div class="shadow">
+        <em>메롱메롱</em>
+        <ul>
+            <li class="reverse" id="apple">사과</li>
+            <li>딸기</li>
+            <!-- class는 여러개를 줄 수 있음(무한하게). 입력 형식은 아래와 같이!! -->
+            <li class="orang reverse" id="big">오렌지</li>
+        </ul>
+        <div class="reverse">당근</div>
+        <p>토마토 <em>마토</em> </p>
+        <span class="orang">오렌지</span>
+
+    </div>
+
+
+</body>
+</html>

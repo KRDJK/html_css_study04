@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        /* li의 형 중에 아무나 orang이 있으면 OK! */
+       .orang ~ li {
+           background: orangered;
+       }
+
+       /* .orang li {             li의 부모 ul이던 body이던 어디에건 orang 클래스가 있으면 된다.
+           background: orangered;
+       } */
+
+    </style>
+
+</head>
+<body>
+    
+    <ul>
+        <li>사과</li>
+        <li>딸기</li>
+        <li class="orang">오렌지</li>
+        <li>자몽</li>
+        <li>포도</li>
+    </ul>
+
+</body>
+</html>

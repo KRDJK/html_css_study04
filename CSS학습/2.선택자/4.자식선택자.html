@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        /* 맨 뒤 선택자가 타겟, 앞에는 조건 */
+        /* ul태그의 '직속!' 클래스 orang에만 스타일을 먹이고 싶음. */
+        ul > .orang {
+            color: orange;
+        }
+
+        /* 이렇게도 가능!!! */
+        .shadow > p {
+            font-style: italic;
+        }
+
+        div > em {
+            color: gray;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    
+    <em>안뇽안뇽</em>
+
+    <!-- div>(ul>li*3)+div+p+span   +부분은 ul의 형제가 됨. -->
+    <!-- 제일 부모라인에 걸어두면 그 자식라인들도 부모를 따라 한번에 적용됨(이게 상속??) -->
+    <div class="shadow">
+        <em>메롱메롱</em>
+        <ul>
+            <li class="reverse" id="apple">사과</li>
+            <li>딸기</li>
+            <!-- class는 여러개를 줄 수 있음(무한하게). 입력 형식은 아래와 같이!! -->
+            <li class="orang reverse" id="big">오렌지</li>
+        </ul>
+        <div class="reverse">당근</div>
+        <p>토마토 <em>마토</em> </p>
+        <span class="orang">오렌지</span>
+
+    </div>
+
+
+</body>
+</html>

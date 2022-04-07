@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 활용법 참고!! 이것은 내부스타일 기법. -->
+    <style>
+
+        li {
+            color: orangered;
+            font-style: italic;
+        } 
+      /* 일괄적으로 한번에 바꿀 수 있음. 이 경우에는 li는 전부 빨강으로 하겠다고 한거 */
+
+        button {
+            width: 200px;
+            height: 70px;
+            background: #ff0;
+            border-radius: 20px;
+            color: #333;
+            border: none;
+        }
+
+    </style>
+
+    <!-- 내부스타일 기법의 장점은  -->
+
+    <link rel="stylesheet" href="main.css">
+
+</head>
+<body>
+    
+    <h1>안녕안녕</h1>
+
+    <ul>
+        <li>사과</li>
+        <li>딸기</li>
+        <li>토마토</li>
+        <li>석류</li>
+    </ul>
+
+    <!-- 내부스타일 기법의 장단점을 보여주기 위한 예시 버튼 스타일 -->
+    <button>버튼</button>
+    <button>버튼</button>
+    <button>버튼</button>
+    <button>버튼</button>
+
+    <!-- 단점은 매 페이지별로 들어가지 않고 해당 페이지에서만 적용되고 끝남. -->
+    <!-- 암만 가벼운 사이트여도 html 페이지가 100개이상은 나오기 때문에 매우 불편. 매 페이지마다 똑같은 버튼이 나와주진 않음. 그러려면 매 페이지에 해당하는 html 에다가 헤드에 스타일을 또 넣어줘야함 -->
+    <!-- 따라서 이 방법도 별로 권장하진 않음. -->
+
+</body>
+</html>
