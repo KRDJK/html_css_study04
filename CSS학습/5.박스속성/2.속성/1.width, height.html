@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body {
+            background: gray;
+        }
+
+        .box {
+            background: orange;
+            width: 70%; /* 자기 부모의 100%가 기본값이지만 자동으로 변할 수 있음.*/
+            height: auto; /*0이 기본값이지만 내부컨텐츠의 크기만큼(글자의 높이만큼) 높이가 만들어짐.*/
+            font-size: 50px;
+        }
+
+        .box2 {
+            background: tomato;
+            width: 70%; /* 부모 대비 70%, 그럼 부모가 70%였으면 70%의 70%가 되는 것. */
+            height: 100px;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="box">안녕
+        <div class="box2"></div>
+
+    </div>
+
+</body>
+</html>

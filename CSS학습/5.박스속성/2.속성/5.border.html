@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .box {
+            width: 150px;
+            height: 150px;
+            margin-top: 10px;
+            background: gray;
+            box-sizing: border-box; /* 커지면 안될 때 쓰고, 커져도 될 때는 넣지 않음.*/
+        }
+
+        .box1 {
+            background: tomato;
+
+            /* 선의 굵기 */
+            border-width: 10px;
+            /* 선의 모양 (solid는 실선, double은 이중선, dashed는 파선(종이접기의 접는 선), dotted는 점선, inset은 ??? ) */
+            border-style: solid;
+            /* 선의 색깔 */
+            border-color: orange;
+
+            /* 선은 상하좌우에 네 군데 들어가기 때문에 크기가 늘어남. */  
+        }
+
+        .box2 {
+            background: aqua;
+            /* 단축속성: 굵기 모양 색상  (순서는 상관없으나 기본적으로 보통 이렇게 씀.) */
+            border: 5px dotted yellowgreen;
+        }
+
+        .box3 {
+            background: red;
+            border-right: 4px solid yellow;
+            border-bottom: 4px dashed green;
+            border-left: 4px dotted skyblue;
+
+            border-top-color: violet;
+            border-top-style: double;
+            border-top-width: 4px;
+        }
+
+        /* 선을 만들되 둥근 선을 표현하고 싶으면 border-radius: 'n'px */
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+
+</body>
+</html>

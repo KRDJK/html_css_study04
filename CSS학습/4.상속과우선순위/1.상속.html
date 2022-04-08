@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .eco {
+            width: 500px;
+            height: 500px;
+            border: 1px solid red;
+            display: flex;
+            align-items: center;
+
+            /* 상속(폰트관련 속성은 상속이 됨. 그러나 위에 있는 것들은 폰트 관련이 아님. 따라서 상속도 아님) */
+            color: dodgerblue;
+            font-weight: bold;
+            /* 이렇게 했더니 생태계만 바뀌는게 아니라 그 후손태그에까지 적용되는걸 볼 수 있음 */
+            
+        }
+
+        .animal {
+            width: 200px;
+            height: 200px;
+            background: orange;
+
+            /* 상속 (형제한테는 상속이 안됨)*/
+            color: gray;
+        }
+
+        .plant {
+            width: 200px;
+            height: 200px;
+            background: green;
+        /* 상속(가장 가까운 부모 태그를 상속받음) */
+            color: violet;
+            font-weight: normal;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <!-- .eco>.animal+(.plant>div*3) -->
+    <div class="eco">생태계
+        <div class="animal">동물</div>
+        <div class="plant">식물
+            <div>소나무</div>
+            <div>튤립</div>
+            <div>해바라기</div>
+        </div>
+    </div>
+    
+</body>
+</html>

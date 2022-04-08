@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        div {
+            color: blue;
+            /* !important; */
+        }
+        #c-y {
+            color: yellow;
+        }
+        .c-g {
+            color: green;
+        }
+        body {
+            color: aqua;
+        }
+        div {
+            color: red;
+        }
+
+        
+        h1 {
+            color: lightcoral;
+            /* 상속은 위에 !important가 있어도 자식이 바꾸어버린 경우이기 때문에 상관없이 lightcoral이 적용됨. */
+        }
+        .bbb h1 {
+            color: orangered;
+        }
+        #aaa h1 {
+            color: gray; /* 여기다 !important를 쓰면 됨*/
+        }
+        #aaa div.bbb h1 {
+            color: greenyellow;
+        }
+        #aaa .bbb h1 {
+            color: tomato;
+        }
+/* 점수계산을 할줄 알아야함 111 + !important가 12 + !important보다 우선함. */
+        div.bbb > h1:first-child {
+            color: violet;
+        }
+        
+    </style>
+
+</head>
+<body>
+    
+    <div id="c-y" class="c-g" style="color: orange;">안녕하세요1</div>
+
+    <div id="c-y" class="c-g">안녕하세요2</div>
+
+    <div class="c-g">안녕하세요3</div>
+
+    <div>안녕하세요4</div>
+
+    <section>안녕하세요5</section>
+
+    <hr>
+
+    <!-- #aaa#bbb>h1{안녕하세요} -->
+    <div id="aaa">
+        <div class="bbb">
+            <h1>안녕하세요6</h1>
+        </div>
+    </div>
+
+    <!-- 
+        우선순위
+        0. !!!   !important
+        1. 인라인 스타일 태그
+        2. id
+        3. class
+        4. div(태그)
+        5. body
+        6. 나중에 나온 설정
+     -->
+
+</body>
+</html>

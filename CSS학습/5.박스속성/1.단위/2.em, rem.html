@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <!-- html 태그에는 폰트사이즈가 16px인게 디폴트로 숨어있음. -->
+    <style>
+
+        div {
+            border: 2px solid gray;
+        }
+
+        .root {
+            /* 폰트사이즈를 따로 규정하지 않은 경우, 폰트 사이즈의 디폴트 값은 16px임 html 태그에 부여된 것이므로*/
+            /*!!! em: 자기 자신의 폰트사이즈 대비 크기임. !!!*/
+            /* rem: html 폰트사이즈(디폴트 16px) 대비 크기. */
+            /* html의 폰트사이즈를 변경하면 rem도 변함!!!! */
+            /* 그래서 계산하기 편하게 html 폰트를 10으로 해놓는 경우도 있으며, 그런 경우에는 아래가 너무 작아질 수 있기 때문에 body 태그에 다시 16사이즈를 설정함. */
+            /* 800px */
+            width: 50em; /* 50 x 20 = 1000px */
+            width: 50rem; /* 50 x 16 = 800px */
+            font-size: 20px;
+            /* 10x50이 됨. */
+        }
+
+        .parent {
+            width: 50%;
+        }
+
+        .child {
+            width: 50%;
+        }
+
+        p {
+            border: 2px solid red;
+            padding: 15px;
+            line-height: 1.5;
+            width: 25em;
+            font-size: 20px;
+        }
+
+        p > strong {
+            color: red;
+            font-size: 1.1em;
+            /* 물려받은 폰트 사이즈 20 픽셀에 대비하여 22가 됨. */
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="root">Root
+        <div class="parent">Parent
+            <div class="child">Child1</div>
+            <div class="child">Child2</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <p>
+        <!-- 로렘 입숨 -->
+        법관은 <strong>탄핵</strong> 또는 금고 이상의 형의 선고에 의하지 아니하고는 파면되지 아니하며, 징계처분에 의하지 아니하고는 정직·감봉 기타 불리한 처분을 받지 아니한다. 여자의 근로는 특별한 보호를 받으며, 고용·임금 및 근로조건에 있어서 부당한 차별을 받지 아니한다. 비상계엄하의 군사재판은 군인·군무원의 범죄나 군사에 관한 간첩죄의 경우와 초병·초소·유독음식물공급·포로에 관한 죄중 법률이 정한 경우에 한하여 단심으로 할 수 있다. 다만, 사형을 선고한 경우에는 그러하지 아니하다.
+
+체포·구속·압수 또는 수색을 할 때에는 적법한 절차에 따라 검사의 신청에 의하여 법관이 발부한 영장을 제시하여야 한다. 다만, 현행범인인 경우와 장기 3년 이상의 형에 해당하는 죄를 범하고 도피 또는 증거인멸의 염려가 있을 때에는 사후에 영장을 청구할 수 있다. 재의의 요구가 있을 때에는 국회는 재의에 붙이고, 재적의원과반수의 출석과 출석의원 3분의 2 이상의 찬성으로 전과 같은 의결을 하면 그 법률안은 법률로서 확정된다.
+    </p>
+</body>
+
+</html>

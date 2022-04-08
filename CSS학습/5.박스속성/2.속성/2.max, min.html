@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .parent {
+            width: 100px;
+            height: 300px;
+            border: 4px solid blue;
+            background: skyblue;
+        }
+
+        .child {
+            background: orange;
+            height: 200px;
+            max-width: 600px;
+            /* 자식으로서 600까지 가로 길이를 가질 수 있다.
+            그런데 부모가 700이 되면 기본값 100%라면 700으로 따라가야 하지만,
+            max-width를 600으로 설정하면 600까지밖에 못 따라간다. */
+            min-width: 200px;
+            /* 부모의 픽셀이 최소 크기보다 작아지면 따라가야할거 같지만,
+            min-width를 걸어두면 그 이하로는 작아지지 않는다. */
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+
+</body>
+</html>
