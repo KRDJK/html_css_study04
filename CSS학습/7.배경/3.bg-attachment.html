@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 스크롤을 내려도 사진이 그 시점에서 계속 따라오는 듯한 느낌을 주고 싶을 때 쓰는게 백그라운드 어태치먼트 -->
+
+    <style>
+
+        body {
+            height: 3000px;
+        }
+
+        .box {
+            width: 90%;
+            height: 700px;
+            margin: 200px auto 0;
+
+            background-image: url('../img/sky.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* 한줄로 쓸 때는
+            background:url('../img/sky.jpg') no-repeat center / cover; */
+
+            /* background-attachment: fixed; */
+            background-attachment: scroll;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="box"></div>
+
+</body>
+</html>

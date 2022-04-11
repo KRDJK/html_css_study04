@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .box {
+            width: 550px;
+            height: 350px;
+            border: 4px dashed gray;
+
+            /* 원래 원문은 이거다. 그동안 생략체를 쓴 것. */
+            background-color: orange;
+            /* url('사진이 저장된 경로') */
+            background-image: url('../img/sky.jpg');
+            background-size: 150px 150px;
+            /* repeat-x or y이면 x로만 반복하거나 or y로만 반복하기. */
+            background-repeat: no-repeat;
+
+            /* x축, y축 값이 순서대로 입력된다고 보면 됨. */
+            /* background-position: left bottom; */
+            /* background-position: center top; */
+            /* background-position: right center; */
+            /* background-position: center; */
+            /* background-position: 0% 0%; 좌측 상단 */
+            /* background-position: 100% 100%; 우측 상단 */
+            background-position: 100% 100%; 
+
+            /* 한번에 쓰는 단축 속성 */
+            /* 생각나는거 나열하면 되는데, 유일하게 주의할 점!!! 포지션을 먼저 쓰고 슬래시 '/'로 구분한 뒤, 사이즈를 입력. */
+            background: orange no-repeat url('../img/sky.jpg') left center / 400px 50px;
+
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="box"></div>
+
+</body>
+</html>

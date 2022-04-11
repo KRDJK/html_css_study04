@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .parent {
+            width: 300px;
+            height: 250px;
+            border: 4px solid gray;
+            /* 내 영역을 벗어나면 다 숨기겠다는 뜻. hidden, scroll(넘치는거 스크롤화 해줄게)*/
+            /* 그냥 스크롤이면 안넘쳐도 스크롤의 흔적을 남겨서 보기 안좋음. 
+            따라서 auto를 활용함. 넘치면 스크롤, 안넘치면 스크롤 안만듦. 심지어 가로는 안만들고 넘치는 부분(예시의 경우 세로만)만 딱 만듦. */
+            overflow: auto;
+            /* overflow: scroll, hidden */
+        }
+
+        .child {
+            width: 100px;
+            height: 100px;
+            background: red;
+            border: 4px solid orange;
+            font-size: 40px;
+        }
+
+        .child:hover {
+            /* opacity 활용 예시, 내가 이 박스에서 뭔갈 하고 있구나. */
+            opacity: 0.6;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="parent">
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+        <div class="child">4</div>
+    </div>
+
+</body>
+</html>

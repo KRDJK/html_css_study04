@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+        div {
+            font-size: 40px;
+        }
+
+        .c1 {
+            color: #ff0000;
+            /* #33ddaa의 색상처럼 다 쌍둥이일 경우, #3da로 입력해도 됨! */
+        }
+
+        .c2 {
+            /* 컬러코드는 16진수, rgb는 10진수 */
+            color: rgb(58, 200, 193);
+        }
+
+        .c3 {
+            color: rgba(58, 200, 194, 0.8);
+            /* a부분은 투명도! 약간 흐리게, 그라데이션처럼 보이는 효과를 노릴 때 활용하기도 함. */
+        }
+
+        #btn {
+            width: 120px;
+            height: 40px;
+            font-size: 1.5em;
+            background: rgb(54, 228, 77);
+        }
+
+        /* 쉽게 하는 방법..? 내가 이걸 제대로 누르고 있구나라는걸 인지 가능. */
+        #btn:hover {
+            background: rgba(54, 228, 77, 0.7);
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="c1">hello</div>
+    <div class="c2">hello</div>
+    <div class="c3">hello</div>
+
+    <button id="btn">click!</button>
+
+</body>
+</html>

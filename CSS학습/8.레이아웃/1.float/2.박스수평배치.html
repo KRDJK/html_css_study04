@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .box {
+            width: 150px;
+            height: 150px;
+            background: orange;
+            margin: 10px;
+            border-radius: 10px;
+            font-size: 50px;
+            font-weight: bold; /*bold:700*/
+
+            text-align: center;
+            vertical-align: center; /* 이건 수평인데, 해보면 적용이 안됨. */
+            line-height: 150px;
+
+            /* 텍스트 정중앙 정렬(x,y축 전부) 
+            text-align:center = x축 
+            line-height: 150px =y축 
+            -->> 줄높이를 세로길이와 동일하게 (위에 .box의 height가 150이기 때문)*/
+
+            /* 박스들을 왼쪽에서부터 수평배치 하고 싶을 때! */
+            float: left;
+        }
+
+        /* 9칸을 3x3 형식으로 바꾸고 싶을 때 방법!! float의 '해제' 개념이 들어감 */
+        .box:nth-child(3n+1) {
+            /* float 해제 (내려갈 애를 해제하고 거기서 다시 시작)*/
+            /* 3행씩 할거면 3n+1, 4행이면 n행 * (n)+1 */
+            clear: both;
+
+            /* float 방향을 맞춰서 clear을 해줘야함.
+            근데 clear은 both가 가능해서 float을 어떻게 해든 거기에 따라가게 가능. */
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+        <div class="box">10</div>
+        <div class="box">11</div>
+        <div class="box">12</div>
+        <div class="box">13</div>
+        <div class="box">14</div>
+        <div class="box">15</div>
+        <div class="box">16</div>
+        <div class="box">17</div>
+        <div class="box">18</div>
+    </div>
+
+</body>
+</html>

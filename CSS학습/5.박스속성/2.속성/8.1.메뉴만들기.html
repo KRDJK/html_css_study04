@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+
+    <style>
+
+        h1 {
+            font-size: 2em;
+            font-weight: bold;
+            /* 배경색을 한번 넣어보고 영역 차지를 얼마나 하는지 본 후에 색을 빼주는 것도 방법! */
+            margin: 20px;
+        }
+
+        section.menu {
+            background: lightgray;
+            width: 80%;
+            margin-left: 10px;
+            padding: 10px;
+        }
+
+        .menu h2 {
+            /* background: orange; */
+            font-size: 1.2em;
+            margin: 20px 0;
+            /* fit-content를 안하면 블록영역 끝까지를 포함하기 때문. */
+            width: fit-content;
+            padding: 8px;
+        }
+
+        /* 해결법 중요, 내가 못찾은 해결책 */
+        .menu h2 a {
+            color: #fff;
+            font-weight: bold;
+            padding: 10px;
+            /* 링크할 때 밑줄 없애기 */
+            text-decoration: none;
+
+            /* x축 그림자 길이, y축 길이, 블러효과 크기, 색상 */
+            /* -를 활용해서 음수를 만들어 상하좌우 조절 가능 */
+            text-shadow: 2px 2px 10px black;
+        }
+
+        .menu h2 a:hover {
+            background: skyblue;
+            color: yellow;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <h1>메뉴 만들기</h1>
+
+    <section class="menu">
+        <h2>
+            <a href="#">[주문] 긴급재난지원금을 쿠X에서 사용할 수 있나요?</a>
+        </h2>
+        <h2>
+            <a href="#">다슬기를 키우고 싶은데 어떤 환경이 필요한가요?</a>
+        </h2>
+        <h2>
+            <a href="#">달팽이가 집을 나갔습니다. 어떻게 하죠??</a>
+        </h2>
+
+    </section>
+
+</body>
+</html>

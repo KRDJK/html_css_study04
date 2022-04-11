@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+    /* 컨테이너끼리는 수직배치이나, 그 안에 속성은 수평배치를 하려고 할 때
+    이것을 중첩 레이아웃이라고 부름. */
+        .container {
+            width: 700px;
+            padding: 20px;
+            border: 3px solid red;
+            margin: 20px;
+            /* 2번 방법 - 부모 요소에 오버플로우: 히든을 박으면 됨. 비추!!! */
+            /* overflow: hidden; 
+            이걸 쓰면 구식이기도 하고, 버그를 잡기 위해 버그를 쓰는 구도가 됨.*/
+        }
+
+        /* 3번 방법!!!! */
+        /* 가상의 clearfix라는 클래스를 만듦. 그런 후, 해제 코드를 넣음. */
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+
+
+        .container2 {
+            width: 700px;
+            padding: 20px;
+            border: 3px solid blue;
+            margin: 20px;
+        }
+
+        .container3 {
+            width: 700px;
+            padding: 20px;
+            border: 3px solid green;
+            margin: 20px;
+        }
+
+
+
+        .box {
+            width: 200px;
+            height: 150px;
+            border: 3px solid green;
+            background: yellowgreen;
+            border-radius: 20px;
+
+            /* 중첩 때 이런 플롯 버그가 나타남. */
+            float: left;
+            /* 교안의 3번 방법을 쓰되, 1,2번 방법을 알아둘 것. */
+
+        }
+        /* 1번 방법인듯 */
+        /* .cbox {
+            clear: both;
+        } */
+
+        
+    </style>
+
+</head>
+<body>
+    
+    <!-- 2번방법은 부모 요소인 컨테이너 클래스에 overflow: hidden을 적용. -->
+    <!-- 해제하고 싶은 요소에 가상 클래스를 가져와서 붙임. 거꾸로 가는 것. -->
+    <div class="container clearfix">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <!-- clear(해제)를 위한 박스를 만드는 것. 보여주진 않을 것. hide 시켜야겠지?? 
+        근데 이 방법을 쓰면 안된다..???  화면에 나타날 것도 아닌데 왜 쓰냐! 구조적으로는 4개가 박스잖아 
+        그러나 시각적으로는 3개만 비춰짐 그래서 이상함.-->
+        <!-- <div class="cbox"></div> -->
+    </div>
+
+<!-- 해제 전용 클래스를 필요한 곳에 추가함. 가장 권장, 정석 방법!!! -->
+
+    <div class="container2 clearfix">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+    <div class="container3 clearfix">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+</body>
+</html>

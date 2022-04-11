@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        #hello {
+            background: red;
+            font-size: 2em;
+            color: yellow;
+            padding: 20px;
+            /* span이 블록이 아니라 인라인이라서 가로 세로 길이가 적용이 안됨.*/
+            /* 평소 display: inline이라는 성질이 숨어 있는 것. 임의로 바꾸기 가능 */
+            display: block;
+        }
+
+        a {
+            background: yellowgreen;
+            width: 100px;
+            height: 100px;
+            /* a 태그는 display 속성을 자주 바꿈
+            이유는 클릭할 때 인라인인 경우 딱 글자를 제대로 클릭해야하는데,
+            블록이면 여유있게 그 언저리만 클릭해도 되게 할 수 있어서 사용자의 편리를 위해 자주 바꿈. */
+            display: inline-block;
+            /* 인라인의 수평 배치는 유지하면서 블록 효과를 노릴 수 있음. 이런 방법이 있다 정도만 알고, 자주 쓰지는 않기를 권장.
+            이후 뭔갈 또 배운다고 함. */
+        }
+
+        .box input {
+            width: 100px;
+            height: 50px;
+            /* input은 기본 display 값이 inline-block */
+        }
+
+        .box input:nth-child(3) {
+            /* display: none; */
+            /* dp: none을 하면 화면에서 아예 숨겨버림. 자리도 남겨두지 않음. 아예 그리지도 않은 것. */
+            
+            /* 투명도 설정: 0% : 0에 가까울수록 투명, 최대값은 1 */
+            opacity: 0;
+            /* dp: none과의 차이점은 원래 있던 자리가 유지됨. */
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <span id="hello">안녕하세요!</span>
+
+    <a href="#">회원가입</a>
+    <a href="#">로그인</a>
+
+    <div class="box">
+
+        <input type="text" value="1">
+        <input type="text" value="2">
+        <input type="text" value="3">
+        <input type="text" value="4">
+        <input type="text" value="5">
+
+    </div>
+
+    <!-- 왜 안됨? -->
+    <script>
+
+        hello.oneclick = e => {
+            hello.style.display = 'none';
+        };
+
+    </script>
+
+
+
+</body>
+</html>

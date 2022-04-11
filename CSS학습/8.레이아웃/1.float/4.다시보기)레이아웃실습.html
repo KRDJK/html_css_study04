@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 필수!!!! content랑 diplay 속성은 무조건! */
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        /* 여기서는 height 값을 넣지 않음. */
+        .container {
+            width: 500px;
+            border: 2px solid red;
+            /* padding: 1px; */
+            /* box-sizing: border-box; */
+        }
+
+        /* 개어렵... */
+        .box {
+            /* 마진 공간을 width에 포함해야 함. 각출을 해야함. */
+            width: 17.6%;
+            height: 100px;
+            border: 2px solid grey;
+            background: yellow;
+            /* 계산 어렵.. */
+            /* margin: 0 1px; */
+            margin-right: 2%;
+            box-sizing: border-box;
+            float: left;
+        }
+
+        /* 한 놈당 0.4씩 내놓게 해라. 토탈 2%을 더 빼야하기 때문 */
+        .box:first-child {
+            margin-left: 2%;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="container clearfix">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+</body>
+</html>
