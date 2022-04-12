@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        /* 바디의 마진, 패딩 속성이 상속되지 않는 이유는 폰트 관련 속성만 상속되기 때문. */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 3000px;
+        }
+
+        header {
+            /* background: orange; */
+            border-bottom: 2px solid gray;
+            /* 헤더 부분이 계속 따라다니게 하고 싶을 때!!! */
+            /* fixed를 넣었더니 가로 길이가 줄어듦. absolute도 똑같음. */
+            /* position 습성은 글자 수가 있는거만큼만 적용되는 습성이 있음. */
+            position: fixed;
+            /* 포지션의 성질 때문에 가로 100%의 기본값이 사라져서 다시 지정해주는 것. */
+            width: 100%;
+
+            /* 매우 중요!!! 
+            fixed는 언제나 브라우저 전체를 기준으로 함!!!!! 부모 요소에 영향 x */
+        }
+
+        header h1 {
+            /* background: greenyellow; */
+            margin: 20px 20px 30px;
+            padding: 0;
+            float: left;
+            font-size: 40px;
+        }
+
+        header ul {
+            /* background: aqua; */
+            margin: 30px 0 0;
+            padding: 0;
+            float: right;
+        }
+
+        header ul li {
+            /* 목록의 동그라미 점 제거 */
+            list-style: none;
+            /* border: 1px solid #000; 영역 보려고 */
+            float: left;
+            margin-top: 10px;
+            margin-right: 30px;
+            /* a태그가 있으면 폰트 관련 속성은 거기서, 박스 속성과 폰트 속성을 구분해서 적는 것이 좋음. */
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        /* float 나오면 항상 따라나와야할 녀석. */
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <header class="clearfix">
+        <h1>My Home</h1>
+        <ul class="clearfix">
+            <li>소개</li>
+            <li>커뮤니티</li>
+            <li>자료실</li>
+            <li>마이페이지</li>
+        </ul>
+    </header>
+
+</body>
+</html>

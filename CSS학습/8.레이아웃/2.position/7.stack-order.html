@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .clearfix {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .container {
+            width: 80%;
+            margin: 50px auto 0;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background: tomato;
+            border: 4px dashed red;
+            border-radius: 15px;
+            font-size: 30px;
+            /* 아래 2개는 x, y축 중앙 정렬 */
+            text-align: center;
+            line-height: 100px;
+            float: left;
+            /* text-shadow랑 적용방식 같음. */
+            box-shadow: 2px 2px 20px #222;
+            /* 양수를 주면 멀어지지만, 음수를 주면 가까워짐. */
+            margin-right: -30px;
+        }
+
+        .box:nth-child(even) {
+            margin-top: 30px;
+        }
+
+        .box1 {
+            /* 모든 박스에 포지션이 들어가는 순간, z-index가 들어가며 기본값은 0임. */
+            z-index: 100;
+        }
+
+        .box2 {
+            z-index: 1;
+        }
+
+        .box3 {
+            z-index: -1;
+            /* position: relative; */
+        }
+        
+        .box4 {
+            z-index: 0;
+        }
+
+        .box5 {
+            z-index: 0;
+        }
+
+        /* 전부 다 포지션이 있는 경우, z-index 값이 누가 높고, 낮냐를 기준으로 적용됨.
+        음수를 포함하여 z-index 값이 가장 낮은 요소가 아래에 깔리며, 가장 높은 요소가 위로 올라감. */
+
+        /* 투명도를 조절해서 먼저 나오게 하고 싶고, 뒤에 가게 하고 싶은 요소가 있을 때, 순서대로 작성하지 않았어도
+        z-index 값으로 조절하여 배치를 유동적으로 바꾸는 것이 가능!!!! */
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="container clearfix">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <!-- 3번에 포지션 옵션을 주면 5번보다도 위로 올라가서 가장 위에 쌓인 요소가 됨. -->
+        <!-- 둘 다 포지션을 갖고 있는 경우, 
+        스타일 부분에 css 부분이 아닌 html 부분에서 제일 늦게 입력된 순서대로 우선 요소가 됨. 제일 위에 쌓이는 ㅇㅇ -->
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <!-- 가장 나중에 작성된 5번이 제일 위에 쌓인다. -->
+        <div class="box box5">5</div>
+    </div>
+
+</body>
+</html>

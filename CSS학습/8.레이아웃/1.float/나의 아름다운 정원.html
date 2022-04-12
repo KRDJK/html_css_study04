@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+
+    <style>
+
+        /* util = float 해제용(버그 fix용) */
+        .clearfix::after {
+            content: '';
+            /* 꼭 블록이 아니어도 되긴 함. 걍 이 속성이 필수라서 아무거나 있기만 하면 됨. */
+            display: block;
+            clear: both;
+        }
+
+        .container {
+            width: 800px;
+            /* background: orange; */
+            margin: 20px auto 0;
+            border: 3px double blue;
+            /* 폰트 사이즈랑 컬러는 내가 안 만졌던 것. */
+            font-size: 14px;
+            color: #333;
+        }
+
+        .container h1 {
+            background: gainsboro;
+            font-size: 2em;
+            text-align: center;
+            font-weight: bold;
+            font-family: cursive;
+            padding: 15px;
+        }
+
+        .container h2 {
+            background: #332f2f;
+            color: whitesmoke;
+            text-align: center;
+            padding: 10px;
+            border-bottom: 2px solid #888;
+        }
+
+        .container span {
+            color: yellow;
+            font-size: 1.2em;
+        }
+
+        .container .gallery {
+            background: grey;
+            /* padding: 20px; 아닌거 같아서 지움.*/
+            /* 맞네?! */
+            padding: 20px 0;
+            /* 마진의 일관성을 위해 패딩보다는 마진을 쓰는 것이 좋을 듯 첫 li의 마진이 되겠지 */
+            /* 마진을 쓸 경우에는 0.25씩을 24퍼에서 또 빼서 가로길이를 23.75로 설정 후 li의 첫 자식에 마진 왼쪽을 1%로 넣으면 됨.*/
+            padding-left: 1%;
+        }
+
+        .container .gallery li {
+            width: 24%;
+            height: 270px;
+            /* 가로를 따로 설정해주지 않고 float을 걸면 기본이 가로 100퍼기 때문에 다른 애들이 수평배치로 올라올 자리가 없음. */
+            float: left;
+            /* margin: 20px 10px; 아닌거 같아서 지움.*/
+            margin-right: 1%;
+            box-sizing: border-box;
+            border: 1px solid skyblue;
+        }
+
+        .tulip {
+            background: red;
+            padding: 5px;
+        }
+
+        .jebi {
+            background: purple;
+            padding: 5px;
+        }
+
+        .hobak {
+            background: orange;
+            padding: 5px;
+        }
+
+        .sunflower {
+            background: yellow;
+            padding: 5px;
+        }
+
+        .container .gallery li .img-box {
+            /* width: 100%; 기본값이라 안적어도 됨. */
+            height: 100px;
+            box-sizing: border-box;
+            border: 1px solid skyblue;
+            margin-bottom: 15px;
+            background-size: cover;
+            /* no-repeat, position은 내가 안했던거 */
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+        /* 강사님은 꽃 이름들을 id로 하셨네 */
+
+        .tulip .img-box {
+            background-image: url('../../img/tulip.jpg');
+        }
+
+        .jebi .img-box {
+            background-image: url('../../img/jebi.jpg');
+        }
+
+        .hobak .img-box {
+            background-image: url('../../img/hobak.jpg');
+        }
+
+        .sunflower .img-box {
+            background-image: url('../../img/sunflower.jpg');
+        }
+
+        p {
+            font-weight: bold;
+            font-size: 16px;
+            /* 양쪽정렬은 내가 안했던거! */
+            text-align: justify;
+            line-height: 1.3;
+            padding: 0 5px;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="container">
+        <h1>나의 아름다운 정원</h1>
+        <h2>사람들은 아마 자신에게 <span>자신감을 북돋워 주는</span> 표정 있는 꽃들을 선호할 것이다.</h2>
+        <ul class="gallery clearfix">
+            <li class="tulip">
+                <div class="img-box"></div>
+                <p>
+                너무 화려하지 않으며 고귀한 느낌을 가지고 있다.
+                붉은 색이 단연 으뜸이며 한 송이만 있어도 빼어나다.
+                </p>
+            </li>
+            <li class="jebi">
+                <div class="img-box"></div>
+                <p>
+                드물게 푸른색을 띠고 있으며 작지만 시원해 보이는
+                어린 꽃이라고 할 수 있다. 여럿이 함께 있을 때 더욱 아름답다.
+                </p>
+            </li>
+            <li class="hobak">
+                <div class="img-box"></div>
+                <p>
+                    색도 모양도 화려하며 이름과 걸맞지 않게 아름다운 꽃으로
+                    매우 완숙한 이미지를 풍기는 꽃이다.
+                </p>
+            </li>
+            <li class="sunflower">
+                <div class="img-box"></div>
+                <p>
+                    태양만 바라보는 일편단심의 꽃으로 얼굴이 큰 편에
+                    속하며 송이가 적어야 제격이다.
+                </p>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>

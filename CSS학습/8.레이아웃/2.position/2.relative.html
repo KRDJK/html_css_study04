@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .container {
+            margin: 100px;
+        }
+
+        .box {
+            /* height와 line-height를 맞추면 텍스트 중앙 y축 정렬이 됨. */
+            width: 100px;
+            height: 100px;
+            background: orange;
+            border: 4px dashed red;
+            font-size: 30px;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .box:nth-child(2) {
+            position: relative;
+            /* 아래 뭐가 있든지 겹쳐지면서 내려감. 3번은 그대로인데 2번 혼자 3번을 덮으면서 내려감. */
+            bottom: -30px;
+            left: -50px;
+            /* relative는 자기 원래의 위치를 기준 삼아 상대적으로 움직인다. 
+            다른 요소들은 건들지 않으면서!!!! */
+        }
+
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="container">
+        <!-- 1번 박스를 주석처리해서 없애보면 2번이 1번 위치에 생김. -->
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+
+</body>
+</html>

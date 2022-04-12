@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .container {
+            margin: 100px;
+        }
+
+        .box {
+            /* height와 line-height를 맞추면 텍스트 중앙 y축 정렬이 됨. */
+            width: 100px;
+            height: 100px;
+            background: orange;
+            border: 4px dashed red;
+            font-size: 30px;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .box:nth-child(2) {
+            /* 이러면 3번이 2번의 뒤로 가서 마치 없는듯이 겹쳐짐. */
+            position: absolute;
+            /* left: 200px; */
+            bottom: 50px;
+            /* absolute를 거는 순간, 2번은 해당 그룹에서 빠진게 됨.
+            absolute의 기준점은 브라우저 끝이 기준!!!  */
+            /* relative는 자리를 뺏지 않으나, absolute는 자리를 뺏음. */
+
+
+            /* 항상 브라우저 끝을 기준으로 움직이는 것은 아니라고 함. 02번 파일 참조. */
+        }
+
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+
+</body>
+</html>

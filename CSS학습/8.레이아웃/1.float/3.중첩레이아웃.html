@@ -23,6 +23,7 @@
         /* 3번 방법!!!! */
         /* 가상의 clearfix라는 클래스를 만듦. 그런 후, 해제 코드를 넣음. */
         .clearfix::after {
+            /* 콘텐트는 넣을 내용이 없어서 필수 요소라 공란으로라도 넣어야 함, 디스플레이 요소도 마찬가지!! */
             content: '';
             display: block;
             clear: both;

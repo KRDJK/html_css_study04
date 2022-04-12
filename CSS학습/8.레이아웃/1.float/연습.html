@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+
+    <style>
+
+        /* float을 걸면 부모가 깨짐!!!! ul에 걸었기 때문에 부모인 nav에 clearfix를 걸어줘야 함!!!! */
+        
+
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        nav {
+            /* background: gainsboro; */
+            width: 1000px;
+            padding: 20px;
+
+        }
+
+        ul {
+            /* background: yellow; */
+            float: left;
+            /* width: 40%;
+            a태그끼리 어케 맞춰야 할까 */
+        }
+
+        .gnb {
+            margin-right: 100px;
+        }
+
+        li {
+            float: left;
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: bold;
+            color: black;
+            padding: 5px;
+            margin: 10px;
+        }
+
+        a:hover {
+            color: orange;
+            /* text-decoration: none; 안해도 됐음 */ 
+            border-bottom: 3px solid red;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <nav class="clearfix">
+        <!-- li에도 float을 했기 때문에 시각적으로 문제가 없어도 clearfix를 걸어주는게 맞음. -->
+        <ul class="gnb clearfix">
+            <li>
+                <a href="#">HOME</a>
+            </li>
+            <li>
+                <a href="#">ABOUT</a>
+            </li>
+            <li>
+                <a href="#">BOARD</a>
+            </li>
+            <li>
+                <a href="#">LOGIN</a>
+            </li>
+            <li>
+                <a href="#">JOIN</a>
+            </li>
+        </ul>
+        <ul class="tnb clearfix">
+            <li>
+                <a href="#">검색</a>
+            </li>
+            <li>
+                <a href="#">CONTACT</a>
+            </li>
+            <li>
+                <a href="#">FAQ</a>
+            </li>
+        </ul>
+    </nav>
+
+</body>
+</html>
