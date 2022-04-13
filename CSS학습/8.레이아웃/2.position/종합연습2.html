@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+
+    <style>
+
+        /* util */
+        .clearfix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        section {
+            background: orange;
+            width: 80%;
+            border: 3px solid #000;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        section header {
+            background: yellow;
+            padding: 10px;
+            border: 3px solid #000;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        section header h1 {
+            text-align: center;
+            font-weight: bold;
+            font-size: 2em;
+        }
+
+        .container {
+            background: green;
+            border: 3px solid #000;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .container .menu {
+            background: white;
+            width: 33%;
+            height: 150px;
+            margin-left: 0.25%;
+            margin-right: 0.25%;
+            border: 2px solid #000;
+            box-sizing: border-box;
+            float: left;
+        }
+
+        .container .content {
+            background: #fff;
+            width: 33%;
+            height: 150px;
+            margin-right: 0.25%;
+            border: 2px solid #000;
+            box-sizing: border-box;
+            float: left;
+        }
+
+        .container .banner {
+            background: #fff;
+            width: 33%;
+            height: 150px;
+            margin-right: 0.25%;
+            border: 2px solid #000;
+            box-sizing: border-box;
+            float: right;
+            background-image: url('../../img/publishing.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+        }
+
+        .container li {
+            background: red;
+            line-height: px;
+            /* text-align: center; */
+        }
+
+        .container li a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        .container .content p {
+            text-align: center;
+            line-height: 150px;
+        }
+
+        .container .banner {
+            text-align: center;
+            line-height: 150px;
+        }
+
+        footer {
+            background: gray;
+            border: 3px solid #000;
+            padding: 10px;
+        }
+
+        footer address {
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+    </style>
+    
+</head>
+<body>
+    
+    <section>
+        <header>
+            <h1>header</h1>
+        </header>
+        <div class="container clearfix">
+            <div class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Board</a></li>
+                <li><a href="#">Community</a></li>
+                <li><a href="#">FAQ</a></li>
+            </div>
+
+            <div class="content">
+                <p>content</p>
+            </div>
+            
+            <div class="banner"><a href="#">
+                <!-- <img src="../../img/publishing.png" alt="#"> -->
+            </a>
+            </div>
+        </div>
+        
+        <footer>
+            <address>footer</address>
+        </footer>
+    </section>
+
+</body>
+</html>

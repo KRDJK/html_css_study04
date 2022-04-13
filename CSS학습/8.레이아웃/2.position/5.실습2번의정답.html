@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+
+    <style>
+
+        header {
+            width: 20%;
+            /* background: orange; */
+            /* position: absolute를 걸어서 활용!! */
+            /* position: absolute; */
+            position: fixed;
+        }
+
+        header .gnb {
+            width: 150px;
+            /* background: tomato; */
+            position: absolute;
+            left: 100px;
+            top: 130px;
+            /* transform: translate(-50%, -50%); */
+        }
+
+        header .gnb li {
+            /* border: 1px solid #000; */
+            background: rgb(20, 24, 231);
+            padding: 3px;
+            margin-bottom: 2px;
+        }
+        
+        header .gnb li a {
+            color: #fff;
+            font-size: 17px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .container {
+            background: lightgray;
+            height: 1500px;
+            width: 80%;
+            margin-left: 20%;
+        }
+
+        footer {
+            background: #000;
+        }
+
+        footer address {
+            color: #fff;
+            font-size: 17px;
+            /* 패딩을 활용하는게 더 깔끔 */
+            padding: 50px 0 50px 40px;
+        }
+
+    </style>
+
+</head>
+<body>
+ 
+    <header>
+        <nav>
+            <ul class="gnb">
+                <li><a href="#">COMPANY</a></li>
+                <li><a href="#">PRODUCT</a></li>
+                <li><a href="#">SERVICE</a></li>
+                <li><a href="#">COMMUNITY</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <p>본문내용!!!</p>
+    </div>
+
+    <footer>
+        <address>Copyright Allright Reserved.</address>
+    </footer>
+
+</body>
+</html>
