@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background: greenyellow;
+        }
+
+        .box:hover {
+            /* name, duration은 필수 요소다. */
+            animation-name: grow;
+            animation-duration: 2s;
+            /* animation-delay: 1s; */
+
+            animation-timing-function: linear;
+            /* 애니메이션 반복 횟수 설정 가능! (횟수를 적어주거나 무한대면 infinite) */
+            animation-iteration-count: 2; /* infinite로 무한대로 반복도 가능. */
+        
+            
+            /* 단축속성 */
+            /* 초 부분을 쓸 때만 주의하고 나머지는 생각나는대로 쓰면 됨.
+            앞에 나온 초가 duration이고 뒤에 나온 초가 delay다. */
+            animation: grow 2s linear infinite alternate;
+
+        }
+
+        /* 애니메이션 효과를 먼저 만들고, 그걸 가져다 써야함. */
+        /* 단순 transition보다 더 복잡한 애니메이션 효과를 만들 수 있음. */
+        @keyframes grow {
+            /* 구간별(진행되는 시간 기준인듯)로 효과를 나눌 수 있음 0% ~ 100% */
+            0% {
+                width: 100px;
+                background: greenyellow;
+            }
+            50% {
+                width: 500px;
+                background: orange;
+            }
+            100% {
+                width: 300px;
+                background: violet;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="box"></div>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background: tomato;
+            margin: 30px;
+
+            animation: rotation 2.5s linear infinite 2; /* 반복횟수가 최소 2 이상이어야 alternate가 적용됨.*/
+            animation-direction: alternate reverse;
+
+            /* 
+                normal: 0% ~ 100% 정직하게 움직인다.
+                reverse: 100% ~ 0% 순서 뒤쪽에서부터 역순으로 움직인다!!
+                alternate: 0% ~ 100% ~ 0%로 반복. 정 -> 역 -> 정 -> 역
+                alternate-reverse: 100% ~ 0% ~ 100% 반복. 역 -> 정 -> 역 -> 정
+            */
+        }
+
+        @keyframes rotation {
+            0% {
+                transform: translate(0, 0);
+            }
+            25% {
+                transform: translate(100px, 0);
+            }
+            50% {
+                transform: translate(100px, 100px);
+            }
+            75% {
+                transform: translate(0, 100px);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="box"></div>
+
+</body>
+</html>

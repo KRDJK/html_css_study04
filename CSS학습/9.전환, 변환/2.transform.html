@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background: orange;
+            margin: 50px;
+            font-size: 50px;
+            text-align: center;
+            line-height: 200px;
+
+            transition: 1s;
+        }
+
+        .box1:hover {
+            /* 회전효과 */
+            transform: rotate(720deg); /* 90도 만큼 돌리겠다는 뜻 -90deg면 왼쪽으로 90도 돌리겠다는 뜻*/
+        }
+
+        .box2:hover {
+            /* 이동효과 */
+
+            /* 포지션으로 이동할 때는 애니메이션을 쓰면 안됨. 
+            position으로 이동하면 영구적! 이동이 되는 것. 그래서 hover에다가 쓰는게 아님.*/
+            /* 이동효과를 애니메이션으로 구현할 때는 translate(x축, y축) >> 0도 가능!
+            transform: translatex or y(x축만 이동) */
+            
+            /* position: relative;
+            left: 220px;
+            bottom: 100px; */
+
+            /* translate(x축, y축) */
+            transform: translate(220px, -100px);
+        }
+
+        .box3:hover {
+            /* 확대, 축소효과 */
+            transform: scale(1.2); /* 1.2배 확대라는 뜻!! 배수를 적어야함! */
+            transform: scale(0.7); /* 0.7배 축소! 0.n으로 축소시키면 됨! */ 
+        }
+
+        .box4:hover {
+            /* 비틀기 효과 */
+            transform: skew(20deg, 60deg);
+        }
+
+        .box5:hover {
+            transform: rotate(360deg) scale(0.8) translatex(100px);
+            /* 동시에 360도로 돌면서 0.8배 줄어들고 x축으로 100px만큼 이동하기를 원함. */
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4</div>
+    <div class="box box5">5</div>
+
+</body>
+</html>

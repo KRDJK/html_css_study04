@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background: tomato;
+            margin: 30px;
+
+            animation: moving 2s 2s;
+            /* forwards: 애니메이션이 끝난 위치에서 다시 시작위치로 돌아오지 않고 멈추게 하고 싶을 때!!! */
+            /* backwards: 0% 시작해서 100%까지 가고 시작위치에서 멈춤 */
+            /* both: 0% ~ 100% 구간까지만 보여줌. */
+            animation-fill-mode: backwards;
+        }
+
+        @keyframes moving {
+
+            /* 시작 위치 -> 0% -> 100% -> 시작 위치 */
+
+            0% {
+                background: dodgerblue;
+                transform: translate(100px, 100px);
+            }
+            100% {
+                background: yellowgreen;
+                transform: translate(300px, 100px);
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="box"></div>
+
+</body>
+</html>
