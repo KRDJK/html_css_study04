@@ -447,3 +447,112 @@ section.innovation .img-box .inner .bottom a:hover {
 }
 
 /* end section.innovation */
+
+
+/* section.me style */
+section.me {
+    padding: 80px 0;
+    margin-bottom: 150px;
+    background: url('../img/me.jpg') no-repeat center / cover;
+}
+
+section.me ul.list {
+    width: 74%;
+    margin: 50px auto;
+    /* background: orange; */
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+}
+
+
+/* 안에 li까지 하고 싶지 않아서!! 직속 자식만 되도록!! */
+section.me ul.list > li {
+    padding: 30px 60px;
+    /* border: 1px solid #000; */
+}
+
+section.me ul.list > li:first-child {
+    border-bottom: 1px solid #ddd;
+}
+
+section.me ul.list > li h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    /* background: orange; */
+
+    /* span의 포지션이 여기를 기준으로 삼아야 하기 때문. */
+    position: relative;
+}
+
+section.me ul.list > li h3 span {
+    position: absolute;
+    /* span도 인라인이지만 포지션이 걸려서 블록이 됐음 */
+    left: -35px;
+
+    /* 현재 아이콘 모양은 텍스트로 들어가 있는 것이기 때문!! */
+    color: #ff8342;
+}
+
+section.me ul.list > li p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+section.me ul.list > li .more {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+section.me ul.list > li .more span {
+    color: #ff8342;
+    margin-left: 3px;
+    font-size: 14px;
+}
+
+section.me ul.list ul.in {
+    margin-bottom: 30px;
+}
+
+section.me ul.list ul.in li em {
+    float: left;
+    /* background: tomato; */
+    font-weight: bold;
+
+    /* 가로 길이를 억지로 늘려서 맞췄다. */
+    width: 12%;
+}
+
+section.me ul.list ul.in li p {
+    float: left;
+    /* background: violet; */
+    position: relative;
+}
+
+/* em과 p 사이에 주황색 조그만 점을 넣자. */
+section.me ul.list ul.in li p::before {
+    content: '';
+    /* display: block; -> 포지션을 썼기 때문에 생략 가능 */
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #ff8342;
+    position: absolute;
+    left: -40px;
+    top: 10px;
+}
+
+#incruit-btn {
+    display: block;
+    width: 280px;
+    background: #ff8342;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 50px;
+    margin: 0 auto;
+    padding: 10px 0;
+
+    /* 버튼 리셋을 해놔서 커서 포인터가 사라졌음. */
+    cursor: pointer;
+}
+
+/* end section.me */
