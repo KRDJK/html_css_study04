@@ -374,3 +374,76 @@ section.about ul li a .text p.more::before {
 }
 
 /* end section.abot */
+
+
+/* section.innovation style*/
+section.innovation {
+    margin-bottom: 150px;
+}
+
+section.innovation .img-box {
+    width: 74%;
+    margin: 50px auto 0;
+    /* background: yellow; */
+
+    /* img 속성으로 사진을 넣으면 img 크기만큼 세로값이 부여되지만,
+    bg-img로 넣을 때는 세로 값을 미리 지정을 좀 해줘야 한다. */
+    height: 540px;
+    /* 이건 원본 사진의 높이가 이정도이기 때문에 이렇게 설정한 것.
+    특별한 이유는 없다. */
+
+    background: url('../img/product_1.jpg') no-repeat center / cover;    
+
+    /* 이너 박스가 이 img-box를 기준으로 가야하기 때문 */
+    position: relative;
+}
+
+section.innovation .img-box .inner {
+    background: #3a3c4e;
+    width: 80%;
+    color: #fff;
+
+    /* 공식으로 중앙으로 맞췄다가 수치 조절해서 원래 레이아웃대로 함. */
+    position: absolute;
+    left: 50%;
+    top: 75%;
+    transform: translate(-50%, 0%);
+}
+
+section.innovation .img-box .inner h3 {
+    background: #fff;
+    color: #222;
+    font-size: 18px;
+    padding: 25px 45px;
+    box-sizing: border-box;
+}
+
+section.innovation .img-box .inner .bottom {
+    padding: 35px 85px;
+    box-sizing: border-box;
+}
+
+section.innovation .img-box .inner .bottom p {
+    width: 70%;
+    float: left;
+    line-height: 1.6;
+}
+
+section.innovation .img-box .inner .bottom a {
+    /* 가로 길이는 위에 p를 70으로 해서 30으로 해도 되지만 굳이
+    안하고 자동적으로 올라가보게끔 놔둬봄. */
+    float: right;
+    /* float이 걸려있어서 a 태그는 인라인이지만 블록이 된거임
+    포지션을 건 경우에도 같음!!! */
+
+    background: #ff8342;
+    border-radius: 50px;
+    padding: 7px 30px;
+}
+
+section.innovation .img-box .inner .bottom a:hover {
+    background: #f86010;
+    /* 그라데이션 색을 넣는거나 똑같은 색을 넣고 투명도를 조절하는거랑 비슷하려나?? */
+}
+
+/* end section.innovation */
