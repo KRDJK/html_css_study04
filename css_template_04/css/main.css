@@ -556,3 +556,123 @@ section.me ul.list ul.in li p::before {
 }
 
 /* end section.me */
+
+
+/* section.sns style */
+section.sns {
+    margin-bottom: 60px;
+}
+
+section.sns ul {
+    width: 74%;
+    margin: 50px auto;
+}
+
+section.sns ul li {
+    /* border: 1px solid #000; */
+    box-sizing: border-box;
+    width: 32%;
+    margin-right: 2%;
+    float: left;
+}
+
+section.sns ul li:last-child {
+    margin-right: 0;
+}
+
+section.sns ul li .img-box {
+    /* 사진이 들어갈 액자의 세로 사이즈를 정해준 것. */
+    /* 제일 세로 사이즈가 작은 사진에 맞춰서 225를 한 것. */
+    height: 225px;
+
+    /* 편법이긴 함. 사진을 편집해서 크기를 맞춰놓고 시작하는게 좋음. */
+    overflow: hidden;
+
+    /* 밑에 투명 박스가 얘를 기준으로 움직여야하기 때문. */
+    position: relative;
+}
+
+/* 투명 주황색 박스를 하나 더 만들어서 애니메이션 효과를 줄거임.. 개어렵 */
+section.sns ul li .img-box::before {
+    content: '';
+    /* 마우스를 손으로 올렸을 때 보이게 할거라서 사라지게 해주려면 가로를 없애면 됨. */
+    width: 0%;
+    height: 100%;
+    background: rgba(255,131,66,0.75);
+    position: absolute;
+    transition: 0.5s;
+}
+
+section.sns ul li a:hover .img-box::before {
+    width: 100%;
+}
+
+section.sns ul li .img-box::after {
+    content: 'BLOG';
+    /* display: block; */
+    font-size: 15px;
+    font-family: 'Exo 2', sans-serif;
+    border: 1px solid #fff;
+    border-radius: 40px;
+    color: #fff;
+    padding: 5px 30px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* hover 했을 때만 보여야 하기 때문! */
+    opacity: 0;
+    transition: 0.7s;
+}
+
+section.sns ul li a:hover .img-box::after {
+    opacity: 1;
+}
+
+/* 매우 중요해보임. 다시 보자. */
+
+
+
+section.sns ul li .img-box img {
+    width: 100%;
+}
+
+/* 두번째 박스의 사진을 땡겨 올릴 때!!
+(보여주고자 하는 부분으로 사진 위치를 변경시키려고 할 때) */
+section.sns ul li:nth-child(2) .img-box {
+    position: relative;
+}
+section.sns ul li:nth-child(2) .img-box img {
+    position: absolute;
+    top: -40px;
+}
+/* 위와 같은 방법으로 내가 보여주고 싶은 부분이 나오게 포지션을 통해 조정 가능 */
+
+section.sns ul li .bottom {
+    padding: 20px 0 20px 20px;
+    box-sizing: border-box;
+}
+
+section.sns ul li .bottom p {
+    font-size: 18px;
+}
+
+section.sns ul li .bottom p.color {
+    color: #ff8342;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+section.sns ul li .bottom p.time {
+    color: #999;
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+section.sns ul li .bottom p.time i {
+    margin-right: 5px;
+    font-size: 0.9em;
+}
+
+/* end section.sns */
+
