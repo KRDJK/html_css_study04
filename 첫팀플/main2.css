@@ -150,14 +150,14 @@ header .inner-header .top-menu .chat a em {
     color: orange;
 }
 
-/* end header */
+/* header 끝 */
 
 /* main */
 
     .main .change {
         width: 60%;
         background: #fff;
-        margin: 30px auto;
+        margin: 100px auto 30px;
         border: 1px solid gainsboro;
         border-radius: 10px;
         padding: 15px;
@@ -166,7 +166,7 @@ header .inner-header .top-menu .chat a em {
     .main .info {
         width: 60%;
         background: #fff;
-        margin: 0 auto;
+        margin: 0 auto 50px;
         padding: 15px;
         border: 1px solid gainsboro;
         border-radius: 10px;
@@ -179,13 +179,13 @@ header .inner-header .top-menu .chat a em {
     .main div h2 {
         font-weight: bold;
         padding: 15px 0px;
+        margin-bottom: 15px;
         font-size: 1.5em;
     }
 
     .main img {
         width: 100%;
         border-radius: 10px;
-        /* margin: 0 auto; */
     }
 
     .main .change a {
@@ -204,7 +204,6 @@ header .inner-header .top-menu .chat a em {
     }
 
     .main .change div a .image li:nth-child(2) {
-        /* padding: 10px 0; */
         font-weight: bold;
         font-size: 1.2em;
     }
@@ -221,8 +220,7 @@ header .inner-header .top-menu .chat a em {
         width: 15px;
         height: 15px;
         line-height: 15px;
-        float: right; */
-    }
+        float: right;} */
 
     .main .change div a .image li.price .price-detail {
         float: left;
@@ -235,9 +233,55 @@ header .inner-header .top-menu .chat a em {
         color: #000;
     }
 
+    .main button.more {
+        width: 100%;
+        /* background: black; */
+        /* text-align: center; */
+    }
+
+    .main button.more a {
+        text-align: center;
+        font-size: 1.2em;
+    }
+
+    .main .info img {
+        width: 15px;
+        height: 15px;
+    }
+
+    .main .info h3 {
+        /* background: pink; */
+        line-height: 1.5;
+        padding: 10px 0;
+    }
     
+    .main .info h3 a {
+        font-size: 1.4em;
+    }
+
+    .main .info p {
+        /* background: yellowgreen; */
+        padding-bottom: 10px;
+        border-bottom: 1px solid darkgray;
+        /* float: left; */
+    }
+
+    .main .info p a {
+        color: gray;
+    }
+
+    .main .info h3 a em {
+        display: inline-block;
+        background: rgba(241, 144, 52, 0.15);
+        color: orange;
+    }
+
+    .main .info p .right {
+        /* float: right; */
+    }
 
 
+/* main. 끝 */
 
 /* footer */
 footer {
@@ -338,4 +382,4 @@ footer section .copy {
     color: darkgray;
 }
 
-/* end. footer */
+/* footer. 끝 */
