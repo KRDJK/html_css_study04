@@ -8,42 +8,72 @@
     <!-- reset -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
 
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
     
-    <div class="wrapper">
-        <!-- header -->
-        <header>
+    <div id="wrapper">
 
-            <nav class="logo">
-                <a href="#">
-                    <img src="img/logo_carrot.JPG" alt="메인 로고이미지">
-                </a>
-            </nav>
-            <nav class="search">
-                <!-- input 안에 돋보기 검색 버튼은 어케 만들지..? -->
-                <input type="text" value="동네 이름, 물품명 등을 검색해보세요!">
-            </nav>
-            <nav class="header-right">
-                <div class="download">
-                    <h2>다운로드</h2>
-                    <ul class="hide-menu">
-                        <li>
-                            <a href="#"><img src="img/logo_apple.JPG" alt="앱스토어 이미지"> App Store</a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="img/logo_playstore.jpg" alt="플레이스토어 이미지"> Google Play</a>
-                        </li>
-                    </ul>
-                </div>
-                <nav class="chat">
+        <header>
+            <div class="inner-header clearfix">
+                <!-- 로고 -->
+                <div class="logo">
                     <a href="#">
-                        <h2>당근채팅<em>Beta</em></h2>
+                        <img src="https://d1unjqcospf8gs.cloudfront.net/assets/home/base/header/logo-basic-24b18257ac4ef693c02233bf21e9cb7ecbf43ebd8d5b40c24d99e14094a44c81.svg" alt="로고이미지">
                     </a>
-                </nav>
-            </nav>
+                </div>
+
+                <!-- 검색창 -->
+                <div id="search" class="clearfix">
+                    <input type="search" value="동네 이름, 물품명 등을 검색해보세요!">
+                    <button class="search-button">
+                        <img src="https://d1unjqcospf8gs.cloudfront.net/assets/home/base/header/search-icon-7008edd4f9aaa32188f55e65258f1c1905d7a9d1a3ca2a07ae809b5535380f14.svg" alt="검색이미지">
+                    </button>
+                </div>
+
+                <!-- 상단 메뉴 -->
+                <div class="top-menu clearfix">
+                    <!-- 앱 다운로드 -->
+                    <div id="wrap-download">
+                        <a href="#" class="download">
+                            <div>다운로드
+                                <i class="fas fa-angle-up"></i>
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                            <div class="app-link">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <img src="imges/apple-store-3a664174124650d63cae365bc55586fc5ff27b822b1b97788fc4af77d73d00c8.svg" alt="apple">
+                                            <span>App store</span> 
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="imges/google-play-c9ad0fc573cd01e2b982df5de6709a3d8d7cec8d9b58a5c08db7da0b92a32a75.svg" alt="Google">
+                                            <span>Google Play</span> 
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    
+                     <!-- 당근채팅 -->
+                     <button class="chat">
+                        <a href="#">
+                            당근채팅<em>Beta</em>
+                        </a>
+                    </button>
+
+                    
+                </div>
+            </div>
         </header>
-        <!-- header -->
+        <!-- header 끝 -->+
 
         <!-- main -->
         <!-- main의 짝수랑 first-child랑 nth:child를 써서 배경색을 입혀보자 -->
@@ -62,9 +92,82 @@
         <div class="main change">
 
         </div>
+
+        <!-- footer -->
         <footer>
+            <section>
+                <nav class="clearfix">
+                    <ul class="bottom-logo">
+                        <img src="img/logo_carrot_bottom.JPG" alt="하단 로고이미지">
+                    </ul>
+                    <ul class="list1">
+                        <li><a href="#">믿을 수 있는 중고거래</a></li>
+                        <li><a href="#">자주 묻는 질문</a></li>
+                    </ul>
+                    <ul class="list2">
+                        <li><a href="#">광고주센터</a></li>
+                        <li><a href="#">당근페이</a></li>
+                        <li><a href="#">동네가게</a></li>
+                    </ul>
+                    <ul class="list3">
+                        <li><a href="#">회사 소개</a></li>
+                        <li><a href="#">채용</a></li>
+                    </ul>
+                    <ul class="list4">
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">위치기반서비스 이용약관</a></li>
+                    </ul>
+
+                </nav>
+                <ul class="mail clearfix">
+                    <li>고객문의
+                        <a href="#"> cs@daangnservice.com</a>
+                    </li>
+                    <li>제휴문의
+                        <a href="#">contact@daangn.com</a>
+                    </li>
+                    <li>지역광고
+                        <a href="#">ad@daangn.com</a>
+                    </li>
+                    <li>PR문의
+                        <a href="#">pr@daangn.com</a>
+                    </li>
+
+                </ul>
+                <ul class="address clearfix">
+                    <li>서울특별시 구로구 디지털로30길 28, 609호 (당근서비스)</li>
+                    <li>사업자 등록번호 : 375-87-00088</li>
+                    <li>직업정보제공사업 신고번호 : J1200020200016</li>
+                </ul>
+
+                <div class="clearfix">
+                    <ul class="sns clearfix">
+                        <li>
+                            <img src="https://d1unjqcospf8gs.cloudfront.net/assets/home/base/footer/icon-facebook-0563f4a93852d073b41f13b8bcabb03d47af3bb3a6755cdfedd8a73686c7f18c.svg" alt="페이스북 이미지">
+                        </li>
+                        <li>
+                            <img src="https://d1unjqcospf8gs.cloudfront.net/assets/home/base/footer/icon-instagram-2f6c88a461597907c114b7ce28eab053fcae791ed26417915fefb6f7c9f95756.svg" alt="인스타그램 이미지">
+                        </li>
+                        <li>
+                            <img src="https://d1unjqcospf8gs.cloudfront.net/assets/home/base/footer/icon-blog-e1b0d512d1766a6962ec5bbb5b0803d2a6a9c55ad97db5ba9eebb76013caceba.svg" alt="네이버 블로그 이미지">
+                        </li>
+                    </ul>
+                    <ul class="local clearfix">
+                        <li><img src="https://d1unjqcospf8gs.cloudfront.net/assets/home/base/footer/icon-global-2f53678b428ec623cefd07a90dd7777f3e55fc0433918f645d7d75ace6ff1fc3.png" alt="지구본 아이콘">
+                        </li>
+                        <li>한국</li>
+                    </ul>
+                </div>
+                <ul class="copy">
+                    <li>
+                        <p>&copy;Danggeun Market Inc.</p>
+                    </li>
+                </ul>
+            </section>
 
         </footer>
+        <!-- end. footer -->
     </div>
 
 </body>
