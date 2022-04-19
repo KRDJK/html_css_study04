@@ -264,6 +264,8 @@ header .inner-header .top-menu .chat a em {
         padding-bottom: 10px;
         border-bottom: 1px solid darkgray;
         /* float: left; */
+        /* width: 70%; */
+        /* box-sizing: border-box; */
     }
 
     .main .info p a {
@@ -271,13 +273,22 @@ header .inner-header .top-menu .chat a em {
     }
 
     .main .info h3 a em {
-        display: inline-block;
+        /* display: inline-block; */
         background: rgba(241, 144, 52, 0.15);
         color: orange;
     }
 
+    .main .info p .left {
+        color: gray;
+        float: left;
+        width: 20%;
+    }
+
     .main .info p .right {
-        /* float: right; */
+        float: right;   
+        width: 20%;
+        /* background: #000; */
+
     }
 
 

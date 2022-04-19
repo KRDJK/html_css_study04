@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        section {
+            display: flex;
+        }
+
+        .container {
+            width: fit-content;
+            border: 2px solid red;
+            padding: 20px;
+
+            display: flex;
+
+            /* 개편한데..? 부모한테 걍 flex 걸면 됨*/
+            /* display: inline-flex; */
+            /* inline-flex를 하면 inline-block처럼 또 공백이 생김.
+            딱 붙이면 또 없긴 함. 근데 비추. */
+        }
+
+        .item {
+            width: 100px;
+            height: 100px;
+            border: 2px solid orange;
+            /* float: left; */
+
+            /* 인라인 블록으로 하면 공백이 생김. */
+            /* display: inline-block; */
+            /* 이렇게 하면 태그를 완전 딱 붙여서 작성해야 함. */
+        }
+
+        /* .clearfix::after {
+            content: '';
+            display: block;
+            clear: both; }*/
+        
+    </style>
+
+</head>
+<body>
+    
+    <section>
+        <div class="container">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+        <div class="container">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+        <div class="container">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+    </section>
+
+</body>
+</html>
