@@ -4,6 +4,16 @@
 function hideGoTop(scrollTop) {
     const $goTop = document.querySelector('.go-top');
 
+    /*
+        $goTop.classList.toggle('hide', true);
+        ㄴ 이러면 hide가 있건 없건 확인도 안하고 강제 추가.
+        ㄴ 반대로 두번째 인수로 false를 주면 확인없이 강제 제거.
+
+        toggle함수의 2번째 인수로 논리값을 전달하면
+        true일 경우 클래스를 강제로 추가하고
+        false일 경우 클래스를 강제로 제거해준다.
+
+    */
     $goTop.classList.toggle('hide', scrollTop < 800);
 
     /*
@@ -54,7 +64,7 @@ function changeFixHeader(scrollTop) {
         //jQuery animate함수: 애니메이션의 종류나 속도 지정
         $('html, body').animate({
             scrollTop: 0
-        }, 1200);
+        }, 1200); // 1.2초에 걸쳐서 올라가라 스크롤 탑이 0이 될 때까지!!
     });
 
 }());
